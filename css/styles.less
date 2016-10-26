@@ -1,3 +1,6 @@
+@primary: #e7222d;
+@darker: darken(@primary, 15%);
+
 body {
 	font-family: 'Lato', sans-serif;
 }
@@ -12,4 +15,18 @@ h1, h3, input {
 
 .buttons {
 	text-align: center;
+}
+
+.btn-primary {
+	background-color: @primary;
+	border-color: @darker;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover {
+	background-color: @darker;
+	border-color: darken(@darker, 15%);
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+	outline: none;
 }
